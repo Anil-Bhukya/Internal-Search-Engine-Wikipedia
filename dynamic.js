@@ -1,4 +1,11 @@
 let searchInputEl = document.getElementById("searchInput");
+function displayResults(searchResults) {
+    spinnerEl.classList.add("d-none");
+  
+    for (let result of searchResults) {
+      createAndAppendSearchResult(result);
+    }
+  }
 function searchWikipedia(event) {
     if (event.key === "Enter") {
   
